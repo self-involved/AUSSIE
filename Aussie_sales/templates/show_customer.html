@@ -1,0 +1,40 @@
+<html>
+<head>
+<title> 大老板在不在列 </title>
+<h1> 各位大老板 </h1>
+<br>
+</head>
+
+<body>
+
+<table border=1 style="width:100%">
+  <tr>
+  	<th>客户id</th>
+    <th>大老板贵姓</th>
+    <th>大老板豪宅</th> 
+    <th>大老板吉祥号</th>
+  </tr>
+  
+  {% for each in result %}
+  <tr>
+  	{% for i in  each  %}
+		
+				
+		
+			<th> {{ i }} </th>
+		
+		
+		
+	{% endfor %}  
+  </tr>
+  {% endfor %}
+
+
+
+
+</table>
+
+
+<body>
+
+</html>

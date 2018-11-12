@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>发货咯</title>
+</head>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/to_center.css') }}"/>
+
+<body>
+<div aligh="center">
+<h1 style="color:#ff08d9;text-align:center"> 送瘟神 </h1>
+
+<p style="color:#ff9b0c;text-align:center"> 更新订单 </p>
+<form id="new_order" action={{ url_for('main.update_logistics_next') }}>
+<table border=1 style="width:60%" align=center>
+    <tr>
+        <th>选个大老板</th>
+        <th>蛋疼的邮费</th>
+        <th>快递公司</th>
+        <th>快递单号</th>
+        <th>寄出日期</th>
+        <th>大老板传件没</th>
+        <th>大老板到货没</th>
+
+    </tr>
+
+    <tr>
+    <th>
+        <select name='order_list' >
+          <option value ='' selected disabled hidden>--choose one--</option>
+        {% for each in content %}
+          <option value ={{each}}>{{each}}</option>
+        {% endfor %}
+        </select>
+    </th>
+    <th>
+        <input type="text" name="delivery"/>
+    </th>
+    <th>
+        <input type="text" name="company" value="长江"/>
+    </th>
+    <th>
+        <input type="text" name="id"/>
+    </th>
+    <th>
+        <input type="date" name="send_date" value={{today}} min="2018-01-01" max="2025-12-31" />
+    </th>
+    <th>
+        <select name='verified' >
+          <option value ="FALSE" selected >么得</option>
+          <option value ="TRUE">传了</option>
+        </select>
+    </th>
+    <th>
+        <select name='received' >
+          <option value ="FALSE" selected >么得</option>
+          <option value ="TRUE">到货</option>
+        </select>
+    </th>
+
+    </tr>
+</table>
+<br>
+<input type="submit" value="到账离手" style="float:right;"/>
+</form>
+<br>
+</div>
+<hr>
+
+<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4213986190,596200000&fm=26&gp=0.jpg" alt="BYE" >
+
+
+</body>
+</html>

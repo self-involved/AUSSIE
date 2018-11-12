@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>金主信息维护</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/to_center.css') }}"/>
+
+</head>
+<body>
+ <div >
+<h1 style="color:Dodgerblue;text-align:center"> 财神爷信息维护 </h1>
+<br>
+<h3 style="color:#ff5ec5;text-align:center"> 查看现有财神信息 </h3>
+ 
+<form  action={{url_for('main.view_customers')}} style="color:#000000;text-align:center">
+<br>
+<input type="submit" value="你够不着呀够不着呀">
+<br>
+ </form>
+</div>
+
+<div >
+ <hr>
+<h3 style="color:#ff0a3e;text-align:center"> 宰新客咯 </h3>
+
+
+<form action={{url_for('main.add_customers')}} style="color:#000000;text-align:center">
+<!-- onsubmit = 'alert({{message}});return false;'>
+<!-->
+金主姓名:
+<br>
+<input type='text' name='name' value='王思聪'>
+<br>
+豪宅地址:
+<br>
+<input type='text' name='addr' value='中南海'>
+<br>
+吉祥号码:
+<br>
+<input type='text' name='tel' value='13813888888'>
+<br>
+
+
+<input type='submit' value='大官人请进'>
+</form>
+</div>
+<br>
+
+
+
+
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542498350&di=f9bf92918feb104ad72058e4d673919e&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.mp.sohu.com%2Fupload%2F20170614%2F8426eb92887b4b398a8b35c7c0003a81_th.png" alt="WOW" >
+</body>
+</html>
+ 

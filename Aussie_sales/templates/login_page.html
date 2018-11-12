@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<title>Aussie Login login Page</title>
+ 
+</head>
+<body>
+<style>
+.centre {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+ 
+.clock {
+   font-family: sans-serif;
+   border: thin solid;
+   border-radius: 10px;
+   padding: 5px;
+}
+ 
+</style>
+<h1 style="color:Dodgerblue;text-align:center"><b>Kally的Aussie小助手</b></h1>
+ 
+<p style="color:violet;text-align:center"> 我要赚大钱 </p>
+<br>
+ 
+ 
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542496324&di=ae74c8060eabb00c8837216ebb036701&imgtype=jpg&er=1&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Da11e03df771ed21b6dc426a6c507b7b1%2F0ff41bd5ad6eddc4775026d633dbb6fd52663363.jpg" width="200" height="220" alt="Professioanal Organization" class="centre">
+ 
+<form action={{url_for('admin.login' )}} >
+
+<table border=1 style="width:60%" align=center>
+<tr>
+<th> 猜猜你是谁 </th>
+<th> 芝麻开门码 </th>
+</tr>
+
+<tr>
+<th> <input type="text" name="admin_name"> </th>
+<th> <input type="text" name="password"> </th>
+</tr>
+
+
+</table>
+<input type='submit' value='我真的是猪败' style="float:right;"/>
+</form> 
+<br>
+<script type="text/javascript">
+ 
+const clocks = document.getElementsByClassName("clock");
+ 
+function updateClocks() {
+  for (let clock of clocks) {
+    let timezone = clock.dataset.timezone;
+    let time = new Date().toLocaleTimeString("en-US", {
+      year:'2-digit',
+      month:'2-digit',      
+      day:'2-digit',
+      hour: '2-digit',
+      minute:'2-digit',
+      timeZone: timezone
+    });
+    clock.textContent = time;
+  }
+}
+ 
+ 
+setInterval(updateClocks, 50);
+updateClocks();
+ 
+ 
+</script>
+ 
+<p style="text-align:right;"><b style="background-color:darkgray; ">WorldClock:</b> Melbourne: <span class="clock" data-timezone="Australia/Melbourne"></span></p>
+<p style="text-align:right;">Shanghai: <span class="clock" data-timezone="Asia/Shanghai"></span></p>
+ 
+ 
+</body>
+ 
+<address>
+<br>
+<br>
+Visit us at:Glen Waverley, VIC, 3150, Australia
+<br>
+ 
+<footer>
+<p>Posterd by : XIAO</p>
+<p>Contact :M 0401639666 E xiao.jin8610@gmail.com</p>
+<p>powered by: AWS </p>
+</footer>
+                              
+</html>
+ 
+ 
+ 

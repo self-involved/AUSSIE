@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>上生意啦</title>
+</head>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/to_center.css') }}"/>
+
+<body>
+<div aligh="center">
+<h1 style="color:Dodgerblue;text-align:center"> 接客啦接客啦 </h1>
+
+<p style="color:#ff0629;text-align:center"> 创建订单 </p>
+<form id="new_order" action={{ url_for('main.update_order_next') }}>
+<table border=1 style="width:60%" align=center>
+    <tr>
+        <th>选个大老板</th>
+        <th>卖了啥宝贝</th>
+        <th>咱成本多少</th>
+        <th>卖了多钱</th>
+        <th>哪个渠道</th>
+        <th>哪天赚的钱钱</th>
+    </tr>
+
+    <tr>
+    <th>
+        <select name='customer' >
+          <option value ='' selected disabled hidden>--choose one--</option>
+        {% for each in content %}
+          <option value ={{each}}>{{each}}</option>
+        {% endfor %}
+        </select>
+    </th>
+    <th>
+        <input type="text" name="item" />
+    </th>
+    <th>
+        <input type="text" name="spend" />
+    </th>
+    <th>
+        <input type="text" name="earn" />
+    </th>
+    <th>
+        <select name='sale_method' >
+          <option value ="Alipay" selected >支付宝</option>
+          <option value ="Wechat">微信</option>
+        </select>
+    </th>
+
+    <th>
+        <input type="date" name="purchase_date" value={{today}} min="2018-01-01" max="2025-12-31" />
+    </th>
+    </tr>
+</table>
+<br>
+<input type="submit" value="又宰一个" style="float:right;"/>
+</form>
+<br>
+</div>
+<hr>
+
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541959158653&di=6acb2aeafaa6172cf92eea6f9dc1db10&imgtype=0&src=http%3A%2F%2Fimg.go007.com%2F2016%2F11%2F20%2Fd8e84de70e4f91cc_0.jpg" alt="WOW" >
+
+
+</body>
+</html>

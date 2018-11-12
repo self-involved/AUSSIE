@@ -1,0 +1,24 @@
+body 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.view h1 p form{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border: 3px solid #08aaad;
+    padding: 10px;
+}
+
+
+.create p form{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border: 3px solid #a806ad;
+    padding: 10px;
+}
